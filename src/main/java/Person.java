@@ -1,9 +1,5 @@
-import org.springframework.context.annotation.*;
-import org.springframework.core.type.AnnotatedTypeMetadata;
-import org.springframework.stereotype.Component;
 
-@Configuration("person")
-public class Person implements Condition {
+public class Person {
 
     private int id;
     private String name;
@@ -25,9 +21,5 @@ public class Person implements Condition {
 
     public int getAge() {
         return age;
-    }
-
-    public boolean matches(ConditionContext conditionContext, AnnotatedTypeMetadata annotatedTypeMetadata) {
-        return conditionContext.getBeanFactory().containsBeanDefinition("person");
     }
 }
