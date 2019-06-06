@@ -1,3 +1,4 @@
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
@@ -6,6 +7,10 @@ public class Main {
         loadContextAndVerifyBeans(Person.class, Address.class);
         loadContextAndVerifyBeans(Address.class);
         loadContextAndVerifyBeans(Address.class, Person.class);
+
+        //Spring
+        ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+        System.out.println(context.getBean("myBean"));
     }
 
     private static void loadContextAndVerifyBeans(Class...classToRegister) {
