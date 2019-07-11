@@ -11,7 +11,7 @@
 
   <name>MvcProject Maven Webapp</name>
   <!-- FIXME change it to the project's website
-  <url>http://www.example.com</url>-->
+  <url>http://www.example.com</url> -->
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -36,10 +36,14 @@
           <version>1.2</version>
       </dependency>
       <dependency>
+          <groupId>jstl</groupId>
+          <artifactId>jstl</artifactId>
+          <version>1.2</version>
+      </dependency>
+      <dependency>
           <groupId>javax.servlet</groupId>
-          <artifactId>servlet-api</artifactId>
-          <version>2.5</version>
-          <scope>provided</scope>
+          <artifactId>javax.servlet-api</artifactId>
+          <version>3.0.1</version>
       </dependency>
 
 
@@ -51,10 +55,6 @@
           <groupId>com.fasterxml.jackson.core</groupId>
           <artifactId>jackson-databind</artifactId>
           <version>2.0.2</version>
-      </dependency>
-      <dependency>
-          <groupId>com.jayway.jsonpath</groupId>
-          <artifactId>json-path</artifactId>
       </dependency>
   </dependencies>
 
