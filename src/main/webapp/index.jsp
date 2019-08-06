@@ -5,8 +5,8 @@
     <input type="submit" name="rest"/>
 </form>
 <form action="add">
-    <input type="text" name="n1">
-    <input type="text" name="n2">
+    <input type="text" name="number1">
+    <input type="text" name="number2">
     <input type="submit" name="sum"/>
 </form>
 </body>

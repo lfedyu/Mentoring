@@ -7,5 +7,5 @@
           class="controller.MainController" />
 
     <bean name="restBean"
-          class="controller.RestControllerTest" />
+          class="controller.MyRestController" />
 </beans>
