@@ -63,18 +63,11 @@
             <artifactId>junit</artifactId>
             <version>4.12</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>3.0.0</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>3.0.0</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -104,6 +97,11 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <includes>
+                        <include>**/IntegrationTest.java</include>
+                    </includes>
+                </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -117,9 +115,9 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <includes>
-                        <include>**/Integrational.java</include>
-                    </includes>
+                    <excludes>
+                        <exclude>**/*UnitTest.java</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
         </plugins>
